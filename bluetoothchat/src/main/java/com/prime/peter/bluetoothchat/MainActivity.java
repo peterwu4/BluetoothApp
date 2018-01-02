@@ -1,3 +1,5 @@
+// https://developer.android.com/samples/BluetoothChat/index.html
+
 /*
 * Copyright 2013 The Android Open Source Project
 *
@@ -76,12 +78,13 @@ public class MainActivity extends SampleActivityBase {
         switch(item.getItemId()) {
             case R.id.menu_toggle_log:
                 mLogShown = !mLogShown;
-                ViewAnimator output = (ViewAnimator) findViewById(R.id.sample_output);
+                ViewAnimator output = findViewById(R.id.sample_output);
                 if (mLogShown) {
                     output.setDisplayedChild(1);
                 } else {
                     output.setDisplayedChild(0);
                 }
+                //noinspection deprecation
                 supportInvalidateOptionsMenu();
                 return true;
         }
